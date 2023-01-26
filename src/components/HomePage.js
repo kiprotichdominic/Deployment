@@ -4,7 +4,7 @@ import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
 function HomePage () {
-  
+
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
 
