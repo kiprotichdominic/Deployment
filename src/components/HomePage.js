@@ -16,13 +16,13 @@ function HomePage () {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
   useEffect(() => {
-    fetch("http://localhost:8001/bots")
+    fetch("https://kiprotichdominic.github.io/deployment/db.json")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
 
   function handleDelete(bot) {
-    fetch(`http://localhost:8001/bots/${bot.id}`, {
+    fetch(`https://kiprotichdominic.github.io/deployment/db.json/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((it) => it.id !== bot.id));
